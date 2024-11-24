@@ -1,0 +1,19 @@
+<section>
+  <div class="p-4 bg-info text-center">
+    <p>تسجيل دخول الي الادمن</p>
+  </div>
+  <div class="w-50 m-auto mt-3">
+    <form action="" [formGroup]="adminLoginForm" (ngSubmit)="onsubmit()">
+      <div>
+        <label class="text-start" for="email">الايميل</label>
+        <input formControlName="email" type="text" class="form-control" placeholder="ادخل الايميل">
+      </div>
+      <div class="mt-3">
+        <label class="text-start" for="email">كلمه السر</label>
+        <input formControlName="password" type="text" class="form-control" placeholder="ادخل كلمه السر">
+      </div>
+
+      <button class="btn btn-primary mt-3 w-100">تسجيل الدخول</button>
+    </form>
+  </div>
+</section>
