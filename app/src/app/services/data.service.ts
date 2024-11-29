@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
-// import HijriDate from 'hijri-date';
-
+import { toHijri } from 'luxon-hijri';
+// Make sure to import the hijri plugin
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  
+  fullHijiriDate: any;
 
-  constructor() { }
-  // convertHijriToGregorian(hijriDate: string): string {
-  //   // Convert Hijri date to Gregorian date
-  //   const hijri = new HijriDate(hijriDate);
-  //   const gregorianDate = hijri.toGregorian();
-  //   // Return the Gregorian date in YYYY-MM-DD format
-  //   return `${gregorianDate.year}-${String(gregorianDate.month).padStart(2, '0')}-${String(gregorianDate.day).padStart(2, '0')}`;
-  // }
+  constructor() {}
+  convertToHijri(gregorianDate: Date): any {
+    const hijriDate = toHijri(gregorianDate);
+    this.fullHijiriDate = `${hijriDate?.hd}-${hijriDate?.hm}-${hijriDate?.hy}`;
+    return this.fullHijiriDate;
+  }
 }

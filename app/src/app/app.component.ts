@@ -11,5 +11,11 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
   title = 'app';
+  constructor(){
+
+  }
+ 
+  
 }
