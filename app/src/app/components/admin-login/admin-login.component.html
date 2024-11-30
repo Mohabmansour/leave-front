@@ -4,6 +4,7 @@
   </div>
 
 
+
   <div class="w-50 m-auto mt-5" >
     @if(error){
       <div class="alert alert-danger text-center">
@@ -14,8 +15,8 @@
 
     <form action="" [formGroup]="adminLoginForm" (ngSubmit)="onsubmit()">
       <div>
-        <label class="text-start" for="email">الايميل</label>
-        <input formControlName="email" type="text" class="form-control" placeholder="ادخل الايميل">
+        <label class="text-start" for="email">البريد الالكتروني</label>
+        <input formControlName="email" type="text" class="form-control" placeholder="ادخل البريد الالكتروني">
       </div>
       <div class="mt-3">
         <label class="text-start" for="email">كلمه السر</label>

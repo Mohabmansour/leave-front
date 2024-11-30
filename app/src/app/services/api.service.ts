@@ -19,14 +19,17 @@ export class ApiService {
 
   addNewUser(data:any):Observable<any>{
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1vaGFtZWQgZWxuYWdhciIsImVtYWlsIjoibW9oYW1lZGVsbmFnYXJAZ21haWwuY29tIiwiaWF0IjoxNzMyOTA5MDI5LCJleHAiOjE3MzI5MTk4Mjl9.bECaG4hQbYvkwEZBJ6ZQsHw96urdih1Mvp6HFByj4vU',
+      'Authorization': `Bearer ${ document.cookie }`
     });
     return this._HttpClient.post('http://localhost:10000/new-leave' , data , {headers})
    }
+   getUserDetails(data:any):Observable<any>{
 
+    return this._HttpClient.post('http://localhost:10000/get-leave-details' , data )
+   }
   getCountries():Observable<any>{
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1vaGFtZWQgZWxuYWdhciIsImVtYWlsIjoibW9oYW1lZGVsbmFnYXJAZ21haWwuY29tIiwiaWF0IjoxNzMyOTA5MDI5LCJleHAiOjE3MzI5MTk4Mjl9.bECaG4hQbYvkwEZBJ6ZQsHw96urdih1Mvp6HFByj4vU',
+      'Authorization': `Bearer ${ document.cookie }`
 
     });
     return this._HttpClient.get('http://localhost:10000/all-countries' , {headers})

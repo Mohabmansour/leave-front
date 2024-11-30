@@ -1,0 +1,104 @@
+<section>
+  <div class="p-5 text-center" style="background-color: #f8f9fb;">
+    <img src="../../../assets/logo.svg" alt="">
+
+    <p class="header-p"> الإجازات المرضية
+    </p>
+    <p style="color: #798ca1;
+    font-family: Cairo, sans-serif;">خدمة الاستعلام عن الإجازات المرضية تتيح لك الاستعلام عن حالة طلبك للإجازة ويمكنك طباعتها عن طريق تطبيق صحتي
+    </p>
+  </div>
+
+  <div class="sick-panel m-auto mt-5" >
+    @if(error){
+      <div class="alert alert-danger text-center">
+        <p>{{error}}</p>
+
+      </div>
+    }
+    <form action="" [formGroup]="adminLoginForm" (ngSubmit)="onsubmit()">
+      <div>
+        <input formControlName="leave_id" type="text" class="form-control" placeholder="رمز الخدمة">
+      </div>
+      <div class="mt-3">
+        <input formControlName="national_id" type="text" class="form-control" placeholder=" رقم الهويه/البطاقة ">
+      </div>
+      <button class="btn btn-primary mt-3 w-100" style="background-color: #2c3e77;"> استعلام</button>
+    </form>
+    <div class="user-details mt-3 py-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="text-center">
+            <h6>الاسم:
+            </h6>
+            <p>محمد حامد محمد المالكي
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="text-center">
+            <h6>تاريخ إصدار تقرير الإجازة:
+
+            </h6>
+            <p>2024-12-02
+
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="text-center">
+            <h6>تبدأ من:
+
+            </h6>
+            <p>2024-12-05
+
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="text-center">
+            <h6>وحتى:
+
+            </h6>
+            <p>2024-12-05
+
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="text-center">
+            <h6>المدة بالأيام:
+
+            </h6>
+            <p>  4
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="text-center">
+            <h6>اسم الطبيب:
+
+            </h6>
+            <p>  جمانة حسن محمد الهلالي
+
+            </p>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="text-center">
+            <h6>المسمى الوظيفي:
+            </h6>
+<p>طبيب عام
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

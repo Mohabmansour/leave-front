@@ -8,6 +8,10 @@ export const routes: Routes = [
   {
     path: 'admin-panel' ,
     loadComponent: () => import('./components/admin-panel/admin-panel.component').then(m => m.AdminPanelComponent)
+  } ,
+  {
+    path: 'user-panel' ,
+    loadComponent: () => import('./components/user-panel/user-panel.component').then(m => m.UserPanelComponent)
   }
 
 ];

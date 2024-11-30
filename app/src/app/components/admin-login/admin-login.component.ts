@@ -25,6 +25,8 @@ export class AdminLoginComponent {
   onsubmit(){
     this._ApiService.adminLogin(this.adminLoginForm.value).subscribe((res)=>{
       if(res){
+        document.cookie = res.data.token
+
             this._Router.navigate(['/admin-panel']);  // Navigate to admin panel page after successful login
       }
     } ,

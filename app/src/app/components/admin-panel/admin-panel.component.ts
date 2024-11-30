@@ -27,7 +27,7 @@ export class AdminPanelComponent implements OnInit {
     leave_id: new FormControl(),
     admission_date_en: new FormControl(),
     discharge_date_en: new FormControl(),
-    issue_date: new FormControl(new Date().toISOString()),
+    issue_date: new FormControl(),
     name_en: new FormControl(),
     name_ar: new FormControl(),
     national_id: new FormControl(),
@@ -41,13 +41,13 @@ export class AdminPanelComponent implements OnInit {
   });
 
   onSubmitAdmin(){
-    console.log(this.AdminPanelForm.value);
+    this.AdminPanelForm.controls['issue_date'].setValue(new Date().toISOString())
 
     this._ApiService.addNewUser(this.AdminPanelForm.value).subscribe(
 
       (res)=>{
         this.errorMsgBol = false ;
-        this.AdminPanelForm.reset();
+        // this.AdminPanelForm.reset();
       window.open(res.data)
         console.log(res);
       },
