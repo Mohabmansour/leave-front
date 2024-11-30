@@ -1,8 +1,17 @@
 <section>
-  <div class="p-4 bg-info text-center">
-    <p>تسجيل دخول الي الادمن</p>
+  <div class="p-5 text-center" style="background-color: #247789;">
+    <p class="text-white" style="font-size: 32px;">تسجيل دخول الي الادمن</p>
   </div>
-  <div class="w-50 m-auto mt-3">
+
+
+  <div class="w-50 m-auto mt-5" >
+    @if(error){
+      <div class="alert alert-danger text-center">
+        <p>{{error}}</p>
+
+      </div>
+    }
+
     <form action="" [formGroup]="adminLoginForm" (ngSubmit)="onsubmit()">
       <div>
         <label class="text-start" for="email">الايميل</label>
@@ -13,7 +22,7 @@
         <input formControlName="password" type="text" class="form-control" placeholder="ادخل كلمه السر">
       </div>
 
-      <button class="btn btn-primary mt-3 w-100">تسجيل الدخول</button>
+      <button class="btn btn-primary mt-3 w-100" style="background-color: hwb(191 14% 46%);">تسجيل الدخول</button>
     </form>
   </div>
 </section>
