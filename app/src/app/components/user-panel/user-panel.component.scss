@@ -42,6 +42,36 @@ background-color:#F7F7F7 ;
 
 }
 
+footer{
+  &{
+    background-color: #306db5;
+    padding: 50px 5px;
+
+  }
+  .footer-one{
+    p{
+      font-size: 12px;
+      color: #d8e2f0;
+    }
+  }
+  .footer-two{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    color: #d8e2f0;
+    .footer-twoD{
+      border-left: solid 1px #d8e2f0;
+    }
+
+
+    .line{
+      height: 30px;
+      width: 2px;
+      background-color: red;
+    }
+  }
+}
+
 @media only screen and (min-width : 320px) and (max-width: 768px) {
   .sick-panel{
     width: 95% ;

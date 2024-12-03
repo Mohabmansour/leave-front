@@ -15,7 +15,18 @@ import { ApiService } from '../../services/api.service';
 export class UserPanelComponent {
   _ApiService = inject(ApiService);
   error:any
+  showDetails:boolean = false
   userData:any[] = [] ;
+  userName:string=''
+  createdAt:string=''
+  addmitionS:string=''
+  addmitionE:string=''
+  period:number = 0
+  DocName:string =''
+  posistion:string=''
+
+
+
 
   adminLoginForm:FormGroup = new FormGroup({
     leave_id : new FormControl(null) ,
@@ -26,7 +37,16 @@ export class UserPanelComponent {
 
     this._ApiService.getUserDetails(this.adminLoginForm.value).subscribe(
       (res)=>{console.log(res);
+        this.showDetails= true
         this.userData = res.data ; 
+        this.userName = res.data.name_ar ;
+        this.createdAt = res.data.createdAt ;
+        this.addmitionS = res.data.admission_date_en ;
+        this.addmitionE = res.data.discharge_date_ar ;
+        this.period = res.data.period ;
+        this.DocName = res.data.physician_name_ar ;
+        this.posistion = res.data.position_ar ;
+
         // console.log(this.userData[0].name_en);
         
 
@@ -40,6 +60,8 @@ export class UserPanelComponent {
   }
   reSubmit(){
     this.adminLoginForm.reset();
+    this.showDetails= false
+
 
 }
 }

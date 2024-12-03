@@ -54,80 +54,171 @@
 </div>
 
     </form>
-    <div class="user-details mt-3 py-4">
+@if (showDetails) {
+  <div class="user-details mt-3 py-4">
 
-      <div class="row" >
-        <div class="col-md-6 ">
-          <div class="text-center">
-            <h6>الاسم:
-            </h6>
-<p>{{userData[0].name_ar}}</p>
-          </div>
-
+    <div class="row" >
+      <div class="col-md-6 ">
+        <div class="text-center">
+          <h6>الاسم:
+          </h6>
+<p>{{userName}}</p>
         </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <h6>تاريخ إصدار تقرير الإجازة:
 
-            </h6>
-            <p>2024-12-02
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <h6>تاريخ إصدار تقرير الإجازة:
 
-            </p>
-          </div>
+          </h6>
+          <p>2024-12-02
 
+          </p>
         </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <h6>تبدأ من:
 
-            </h6>
-            <p>2024-12-05
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <h6>تبدأ من:
 
-            </p>
-          </div>
+          </h6>
+          <p>2024-12-05
 
+          </p>
         </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <h6>وحتى:
 
-            </h6>
-            <p>2024-12-05
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <h6>وحتى:
 
-            </p>
-          </div>
+          </h6>
+          <p>2024-12-05
 
+          </p>
         </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <h6>المدة بالأيام:
 
-            </h6>
-            <p> 4
-            </p>
-          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <h6>المدة بالأيام:
 
+          </h6>
+          <p> 4
+          </p>
         </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <h6>اسم الطبيب:
 
-            </h6>
-            <p> جمانة حسن محمد الهلالي
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <h6>اسم الطبيب:
 
-            </p>
-          </div>
+          </h6>
+          <p> جمانة حسن محمد الهلالي
 
+          </p>
         </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <h6>المسمى الوظيفي:
-            </h6>
-            <p>طبيب عام
-            </p>
-          </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <h6>المسمى الوظيفي:
+          </h6>
+          <p>طبيب عام
+          </p>
         </div>
       </div>
     </div>
   </div>
+}
+  </div>
+
+
+
+ <footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 ">
+        <div class="row">
+          <div class="col-lg-4">
+            <div>
+              <img src="../../../../public/assets/leen.svg" alt="">
+              <img src="../../../../public/assets/الصحه.svg.svg" alt="">
+            </div>
+
+          </div>
+          <div class="col-lg-8">
+            <div class="footer-one">
+              <p>منصة صحة معتمدة من قبل وزارة الصحة © 2024
+
+
+              </p>
+              <p>
+                سياسة الخصوصية وشروط الإستخدام  | 
+  دليل الاستخدام
+              </p>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-8 mt-2">
+        <div class="footer-two d-flex">
+          <div class="px-4 d-flex justify-content-between align-items-center footer-twoD">
+            <div class="">
+              <p class="m-0">الرئيسية </p>
+
+            </div>
+ 
+          </div>
+          <div class="px-4 d-flex justify-content-between align-items-center footer-twoD">
+            <div class="">
+              <p class="m-0">الاسئلة الشائعه </p>
+
+            </div>
+ 
+          </div>
+          <div class="px-4 d-flex justify-content-between align-items-center">
+            <div class="">
+              <p class="m-0">تواصل معانا </p>
+
+            </div>
+ 
+          </div>
+
+          <div class="px-4 d-flex justify-content-between align-items-center footer-twoD">
+            <div class="d-flex">
+              <i class="fa-brands fa-twitter mx-3"></i>
+              <i class="fa-brands fa-youtube"></i>            </div>
+ 
+          </div>
+
+          <div class="px-4 d-flex justify-content-between align-items-center footer-twoD">
+            <div class="">
+              <p class="m-0">     supportseha.sa
+              </p>
+
+            </div>
+ 
+          </div>
+          <div class="px-4 d-flex justify-content-between align-items-center">
+            <div class="">
+              <p class="m-0"> 920002005 </p>
+
+            </div>
+ 
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+ </footer>
 </section>
