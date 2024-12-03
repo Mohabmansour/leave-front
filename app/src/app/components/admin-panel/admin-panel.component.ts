@@ -41,13 +41,21 @@ export class AdminPanelComponent implements OnInit {
   });
 
   onSubmitAdmin(){
-    this.AdminPanelForm.controls['issue_date'].setValue(new Date().toISOString())
+    const date = new Date();
+const month = date.getMonth() + 1; // Months are zero-based
+const day = date.getDate();
+const year = date.getFullYear();
+
+const formattedDate = `${year}-${month}-${day}`;
+console.log(formattedDate); // Output: 11-5-2024
+    this.AdminPanelForm.controls['issue_date'].setValue(formattedDate)
+    console.log(this.AdminPanelForm.value);
+    
 
     this._ApiService.addNewUser(this.AdminPanelForm.value).subscribe(
 
       (res)=>{
         this.errorMsgBol = false ;
-        // this.AdminPanelForm.reset();
       window.open(res.data)
         console.log(res);
       },
@@ -60,6 +68,7 @@ export class AdminPanelComponent implements OnInit {
 
     );
   }
+
 
   getAllCountries(){
     this._ApiService.getCountries().subscribe((res)=>{
