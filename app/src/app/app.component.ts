@@ -17,11 +17,5 @@ export class AppComponent {
   constructor(){
 
   }
-<<<<<<< HEAD
 
-
-=======
- 
-  
->>>>>>> 3f558e2adb57981923c62aaf0c964904ddf705cd
 }
