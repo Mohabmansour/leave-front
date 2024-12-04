@@ -25,7 +25,7 @@
 
 
 
-  <div class="sick-panel m-auto mt-5">
+  <div class="sick-panel m-auto mt-5 " style="height: auto;">
     @if(error){
     <div class="alert alert-danger text-center">
       <p>{{error}}</p>
@@ -58,7 +58,7 @@
   <div class="user-details mt-3 py-4">
 
     <div class="row" >
-      <div class="col-md-6 ">
+      <div class="col-lg-6 ">
         <div class="text-center">
           <h6>الاسم:
           </h6>
@@ -71,7 +71,7 @@
           <h6>تاريخ إصدار تقرير الإجازة:
 
           </h6>
-          <p>2024-12-02
+          <p>{{createdAt}}
 
           </p>
         </div>
@@ -82,7 +82,7 @@
           <h6>تبدأ من:
 
           </h6>
-          <p>2024-12-05
+          <p>{{addmitionS}}
 
           </p>
         </div>
@@ -93,7 +93,7 @@
           <h6>وحتى:
 
           </h6>
-          <p>2024-12-05
+          <p>{{addmitionE}}
 
           </p>
         </div>
@@ -104,7 +104,7 @@
           <h6>المدة بالأيام:
 
           </h6>
-          <p> 4
+          <p> {{leave_days}}
           </p>
         </div>
 
@@ -114,7 +114,7 @@
           <h6>اسم الطبيب:
 
           </h6>
-          <p> جمانة حسن محمد الهلالي
+          <p>    {{DocName}}
 
           </p>
         </div>
@@ -124,7 +124,7 @@
         <div class="text-center">
           <h6>المسمى الوظيفي:
           </h6>
-          <p>طبيب عام
+          <p>{{posistion}} 
           </p>
         </div>
       </div>
@@ -137,17 +137,18 @@
 
  <footer>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-4 ">
+    <!-- <div class="row">
+      
+      <div class="col-lg-4 col-md-6">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div>
               <img src="../../../../public/assets/leen.svg" alt="">
               <img src="../../../../public/assets/الصحه.svg.svg" alt="">
             </div>
 
           </div>
-          <div class="col-lg-8">
+          <div class="col-lg-8 col-md-6">
             <div class="footer-one">
               <p>منصة صحة معتمدة من قبل وزارة الصحة © 2024
 
@@ -166,7 +167,7 @@
 
       </div>
 
-      <div class="col-lg-8 mt-2">
+      <div class="col-lg-8 col-md-6 mt-2">
         <div class="footer-two d-flex">
           <div class="px-4 d-flex justify-content-between align-items-center footer-twoD">
             <div class="">
@@ -212,13 +213,92 @@
             </div>
  
           </div>
+        </div>
 
+      </div>
+
+    </div> -->
+  
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-4">
+      <div class="row">
+        <div class="col-12  col-lg-4">
+          <div class="kkkkk">
+            <img src="../../assets/leen.svg" alt="">
+            <img class="mx-3" src="../../assets/الصحه.svg" alt="" style="border-right: 1px #fff3 solid; padding-right: 7px;">
+
+          </div>
+
+        </div>
+        <div class="col-12 kkkkk col-lg-8">
+          <div class="footer-one">
+            <p>منصة صحة معتمدة من قبل وزارة الصحة © 2024
+
+
+            </p>
+            <p>
+              سياسة الخصوصية وشروط الإستخدام  | 
+دليل الاستخدام
+            </p>
+          </div>
 
         </div>
 
       </div>
 
     </div>
+
+    <div class="col-12 col-md-12 col-lg-8">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="footer-links d-flex justify-content-between">
+            <div class="border-l">
+              <p class="m-0">الرئيسية </p>
+
+            </div>
+            <div class="border-l">
+              <p class="m-0">الأسئلة الشائعة </p>
+
+            </div>
+            <div class="text-center w-100">
+              <p class="m-0 text-center">تواصل معنا </p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-5">
+          <div class="footer-icons d-flex justify-content-between">
+            <div class="border-l">
+              <i class="fa-brands fa-twitter mx-3"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="border-l">
+              <p class="m-0">supportseha.sa  </p>
+
+            </div>
+            <div class="w-100 text-center">
+              <p class="m-0"> 920002005 </p>
+
+            </div>
+
+            <div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
   </div>
  </footer>
 </section>

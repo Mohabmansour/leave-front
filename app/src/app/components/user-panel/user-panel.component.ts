@@ -23,7 +23,8 @@ export class UserPanelComponent {
   addmitionE:string=''
   period:number = 0
   DocName:string =''
-  posistion:string=''
+  posistion:string='' 
+  leave_days:number = 0
 
 
 
@@ -39,13 +40,14 @@ export class UserPanelComponent {
       (res)=>{console.log(res);
         this.showDetails= true
         this.userData = res.data ; 
-        this.userName = res.data.name_ar ;
+        this.userName = res.data.name_en ;
         this.createdAt = res.data.createdAt ;
         this.addmitionS = res.data.admission_date_en ;
-        this.addmitionE = res.data.discharge_date_ar ;
+        this.addmitionE = res.data.discharge_date_en ;
         this.period = res.data.period ;
-        this.DocName = res.data.physician_name_ar ;
-        this.posistion = res.data.position_ar ;
+        this.DocName = res.data.physician_name_en ;
+        this.posistion = res.data.position_en ;
+        this.leave_days = res.data.leave_days
 
         // console.log(this.userData[0].name_en);
         
