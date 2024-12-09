@@ -38,16 +38,15 @@ export class UserPanelComponent {
       (res)=>{console.log(res);
         this.showDetails= true
         this.userData = res.data ; 
-        this.userName = res.data.name_en ;
+        this.userName = res.data.name_ar ;
         this.createdAt = res.data.createdAt ;
         this.addmitionS = res.data.admission_date_en ;
         this.addmitionE = res.data.discharge_date_en ;
         this.period = res.data.period ;
-        this.DocName = res.data.physician_name_en ;
-        this.posistion = res.data.position_en ;
+        this.DocName = res.data.physician_name_ar ;
+        this.posistion = res.data.position_ar ;
         this.leave_days = res.data.leave_days
 
-        // console.log(this.userData[0].name_en);
         
 
 

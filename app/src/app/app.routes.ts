@@ -10,7 +10,7 @@ export const routes: Routes = [
     loadComponent: () => import('./components/admin-panel/admin-panel.component').then(m => m.AdminPanelComponent)
   } ,
   {
-    path: 'user-panel' ,
+    path: 'inquries/slenquiry' ,
     loadComponent: () => import('./components/user-panel/user-panel.component').then(m => m.UserPanelComponent)
   }
 

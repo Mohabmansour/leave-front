@@ -3,3 +3,7 @@
     font-family: Cairo, sans-serif;
 
 }
+
+.form-floating > label {
+    display: block !important; /* Ensures label behaves like a normal label */
+  }

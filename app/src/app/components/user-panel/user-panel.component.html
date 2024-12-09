@@ -2,7 +2,8 @@
   <!-- As a link -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary p-5">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="../../../assets/logo.PNG" alt=""></a>
+      
+      <a class="navbar-brand" href="#">  <img src="../../assets/4-removebg-preview.png" alt="seha"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,6 +16,7 @@
           </div>
           <div class="mx-3">
             <button class="create-email">انشاء حساب </button>
+          
             <button class="btn btn-primary login-btn" style="background-color: #306db5;"><i
                 class="fa-regular fa-user"></i> تسجيل الدخول </button>
 
@@ -38,7 +40,7 @@
 
       <p class="header-p"> الإجازات المرضية
       </p>
-      <p style="color: #798ca1;
+      <p class="user-cap" style="color: #798ca1;
     font-family: Cairo, sans-serif;">خدمة الاستعلام عن الإجازات المرضية تتيح لك الاستعلام عن حالة طلبك للإجازة ويمكنك
         طباعتها عن طريق تطبيق صحتي
       </p>
@@ -131,10 +133,10 @@
     </div>
     }
 
-    <div class="d-flex gap-3 btn-div">
-      <button (click)="onsubmit()" class="btn btn-primary mt-3 w-100" style="background-color: #306db5;">
+    <div class="d-flex flex-column gap-3 btn-div">
+      <button (click)="onsubmit()" class="btn btn-primary mt-3 w-25 ci m-auto" style="background-color: #306db5;">
         استعلام</button>
-      <button (click)="reSubmit()" class="btn btn-primary mt-3 w-100" style="background-color: #306db5;"> رجوع
+      <button (click)="reSubmit()" class="btn btn-primary mt-3 w-25 m-auto" style="background-color: #306db5;"> رجوع
         للاستعلامات</button>
     </div>
   </div>
@@ -244,8 +246,8 @@
 
                 </p>
                 <p>
-                  سياسة الخصوصية وشروط الإستخدام |
-                  دليل الاستخدام
+                     <span class="use-m"> سياسة الخصوصية وشروط الإستخدام</span>    |
+                   <span class="use-m">دليل الاستخدام</span>
                 </p>
               </div>
 
@@ -279,9 +281,10 @@
 
             <div class="col-lg-5">
               <div class="footer-icons d-flex justify-content-between">
-                <div class="border-l">
-                  <i class="fa-brands fa-twitter mx-3"></i>
-                  <i class="fa-brands fa-youtube"></i>
+                <div class="border-l border-l-soical">
+                  <i class="fa-brands fa-whatsapp mx-2"></i>
+                  <i class="fa-brands fa-x-twitter "></i>
+                  <i class="fa-brands fa-youtube mx-2"></i>
                 </div>
                 <div class="border-l">
                   <p class="m-0">supportseha.sa </p>
