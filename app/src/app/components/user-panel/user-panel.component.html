@@ -3,7 +3,8 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary p-5">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="../../../assets/logo.PNG" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -14,7 +15,8 @@
           </div>
           <div class="mx-3">
             <button class="create-email">انشاء حساب </button>
-            <button class="btn btn-primary login-btn" style="background-color: #306db5;"><i class="fa-regular fa-user"></i> تسجيل الدخول </button>
+            <button class="btn btn-primary login-btn" style="background-color: #306db5;"><i
+                class="fa-regular fa-user"></i> تسجيل الدخول </button>
 
           </div>
         </ul>
@@ -48,96 +50,100 @@
       <div class="mt-3">
         <input formControlName="national_id" type="text" class="form-control" placeholder=" رقم الهويه/البطاقة ">
       </div>
-<div class="d-flex gap-3">
-  <button class="btn btn-primary mt-3 w-100" style="background-color: #306db5;"> استعلام</button>
-  <button (click)="reSubmit()" class="btn btn-primary mt-3 w-100" style="background-color: #306db5;"> رجوع للاستعلامات</button>
-</div>
+
 
     </form>
-@if (showDetails) {
-  <div class="user-details mt-3 py-4">
+    @if (showDetails) {
+    <div class="user-details mt-3 py-4">
 
-    <div class="row" >
-      <div class="col-lg-6 ">
-        <div class="text-center">
-          <h6>الاسم:
-          </h6>
-<p>{{userName}}</p>
+      <div class="row">
+        <div class="col-lg-6 ">
+          <div class="text-center">
+            <h6>الاسم:
+            </h6>
+            <p>{{userName}}</p>
+          </div>
+
         </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <h6>تاريخ إصدار تقرير الإجازة:
 
-      </div>
-      <div class="col-md-6">
-        <div class="text-center">
-          <h6>تاريخ إصدار تقرير الإجازة:
+            </h6>
+            <p>{{createdAt}}
 
-          </h6>
-          <p>{{createdAt}}
+            </p>
+          </div>
 
-          </p>
         </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <h6>تبدأ من:
 
-      </div>
-      <div class="col-md-6">
-        <div class="text-center">
-          <h6>تبدأ من:
+            </h6>
+            <p>{{addmitionS}}
 
-          </h6>
-          <p>{{addmitionS}}
+            </p>
+          </div>
 
-          </p>
         </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <h6>وحتى:
 
-      </div>
-      <div class="col-md-6">
-        <div class="text-center">
-          <h6>وحتى:
+            </h6>
+            <p>{{addmitionE}}
 
-          </h6>
-          <p>{{addmitionE}}
+            </p>
+          </div>
 
-          </p>
         </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <h6>المدة بالأيام:
 
-      </div>
-      <div class="col-md-6">
-        <div class="text-center">
-          <h6>المدة بالأيام:
+            </h6>
+            <p> {{leave_days}}
+            </p>
+          </div>
 
-          </h6>
-          <p> {{leave_days}}
-          </p>
         </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <h6>اسم الطبيب:
 
-      </div>
-      <div class="col-md-6">
-        <div class="text-center">
-          <h6>اسم الطبيب:
+            </h6>
+            <p> {{DocName}}
 
-          </h6>
-          <p>    {{DocName}}
+            </p>
+          </div>
 
-          </p>
         </div>
-
-      </div>
-      <div class="col-md-6">
-        <div class="text-center">
-          <h6>المسمى الوظيفي:
-          </h6>
-          <p>{{posistion}} 
-          </p>
+        <div class="col-md-6">
+          <div class="text-center">
+            <h6>المسمى الوظيفي:
+            </h6>
+            <p>{{posistion}}
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    }
+
+    <div class="d-flex gap-3 btn-div">
+      <button (click)="onsubmit()" class="btn btn-primary mt-3 w-100" style="background-color: #306db5;">
+        استعلام</button>
+      <button (click)="reSubmit()" class="btn btn-primary mt-3 w-100" style="background-color: #306db5;"> رجوع
+        للاستعلامات</button>
+    </div>
   </div>
-}
-  </div>
 
 
 
- <footer>
-  <div class="container-fluid">
-    <!-- <div class="row">
+  <footer>
+    <div class="container-fluid">
+      <!-- <div class="row">
       
       <div class="col-lg-4 col-md-6">
         <div class="row">
@@ -218,87 +224,88 @@
       </div>
 
     </div> -->
-  
-  <div class="row">
-    <div class="col-12 col-md-12 col-lg-4">
+
       <div class="row">
-        <div class="col-12  col-lg-4">
-          <div class="kkkkk">
-            <img src="../../assets/leen.svg" alt="">
-            <img class="mx-3" src="../../assets/الصحه.svg" alt="" style="border-right: 1px #fff3 solid; padding-right: 7px;">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="row">
+            <div class="col-12  col-lg-4">
+              <div class="kkkkk">
+                <img src="../../assets/leen.svg" alt="">
+                <img class="mx-3" src="../../assets/الصحه.svg" alt=""
+                  style="border-right: 1px #fff3 solid; padding-right: 7px;">
+
+              </div>
+
+            </div>
+            <div class="col-12 kkkkk col-lg-8">
+              <div class="footer-one">
+                <p>منصة صحة معتمدة من قبل وزارة الصحة © {{yearDate}}
+
+
+                </p>
+                <p>
+                  سياسة الخصوصية وشروط الإستخدام |
+                  دليل الاستخدام
+                </p>
+              </div>
+
+            </div>
 
           </div>
 
         </div>
-        <div class="col-12 kkkkk col-lg-8">
-          <div class="footer-one">
-            <p>منصة صحة معتمدة من قبل وزارة الصحة © 2024
+
+        <div class="col-12 col-md-12 col-lg-8">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="footer-links d-flex justify-content-between">
+                <div class="border-l">
+                  <p class="m-0">الرئيسية </p>
+
+                </div>
+                <div class="border-l">
+                  <p class="m-0">الأسئلة الشائعة </p>
+
+                </div>
+                <div class="text-center w-100">
+                  <p class="m-0 text-center">تواصل معنا </p>
+
+                </div>
 
 
-            </p>
-            <p>
-              سياسة الخصوصية وشروط الإستخدام  | 
-دليل الاستخدام
-            </p>
+              </div>
+
+            </div>
+
+            <div class="col-lg-5">
+              <div class="footer-icons d-flex justify-content-between">
+                <div class="border-l">
+                  <i class="fa-brands fa-twitter mx-3"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="border-l">
+                  <p class="m-0">supportseha.sa </p>
+
+                </div>
+                <div class="w-100 text-center">
+                  <p class="m-0"> 920002005 </p>
+
+                </div>
+
+                <div>
+
+                </div>
+              </div>
+
+
+            </div>
+
           </div>
+
 
         </div>
 
       </div>
-
     </div>
-
-    <div class="col-12 col-md-12 col-lg-8">
-      <div class="row">
-        <div class="col-lg-7">
-          <div class="footer-links d-flex justify-content-between">
-            <div class="border-l">
-              <p class="m-0">الرئيسية </p>
-
-            </div>
-            <div class="border-l">
-              <p class="m-0">الأسئلة الشائعة </p>
-
-            </div>
-            <div class="text-center w-100">
-              <p class="m-0 text-center">تواصل معنا </p>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-        <div class="col-lg-5">
-          <div class="footer-icons d-flex justify-content-between">
-            <div class="border-l">
-              <i class="fa-brands fa-twitter mx-3"></i>
-              <i class="fa-brands fa-youtube"></i>
-            </div>
-            <div class="border-l">
-              <p class="m-0">supportseha.sa  </p>
-
-            </div>
-            <div class="w-100 text-center">
-              <p class="m-0"> 920002005 </p>
-
-            </div>
-
-            <div>
-
-            </div>
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-  </div>
- </footer>
+  </footer>
 </section>

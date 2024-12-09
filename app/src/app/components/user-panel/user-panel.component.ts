@@ -24,10 +24,8 @@ export class UserPanelComponent {
   period:number = 0
   DocName:string =''
   posistion:string='' 
-  leave_days:number = 0
-
-
-
+  leave_days:number = 0 ;
+  yearDate = new Date().getFullYear();
 
   adminLoginForm:FormGroup = new FormGroup({
     leave_id : new FormControl(null) ,

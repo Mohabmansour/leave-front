@@ -101,10 +101,20 @@ footer{
 
 @media only screen and (min-width: 320px) and (max-width: 768px) { 
   .sick-panel{
-    width: 95% ;
+    width: 95% !important;
   }
   .col-12 , .col-md-12{
     text-align: center !important;
+    
+  }
+  .btn-div{
+    button{
+      width: 50% !important;
+      margin: auto;
+      
+    }
+    display: flex;
+    flex-direction: column;
     
   }
 
